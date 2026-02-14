@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Puttu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary-pink: #e91e63;
+    --light-pink: #fce4ec;
+    --soft-pink: #f8bbd9;
+    --accent-green: #4caf50;
+    --accent-red: #f44336;
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-pink), var(--light-pink), var(--soft-pink));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #333;
+    position: relative;
+}
+
+/* Floating particles for encouragement */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: float 12s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+/* Professional glass card */
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    animation: slideIn 2s ease-out;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 4s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(60px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-pink);
+    animation: bounceIn 1.5s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.question {
+    font-size: 22px;
+    margin: 30px 0;
+    animation: fadeInText 0.8s ease;
+    line-height: 1.4;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    margin: 15px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+.yes {
+    background: var(--accent-green);
+    color: white;
+}
+
+.yes:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.no {
+    background: var(--accent-red);
+    color: white;
+    position: absolute;
+    animation: wiggle 1.5s infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+/* Progress bar for encouragement */
+.progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-pink), var(--light-pink));
+    border-radius: 8px;
+    transition: width 0.6s ease;
+}
+
+/* Floating animations: hearts, stars, and chubby kids */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.9;
+}
+
+.star {
+    position: absolute;
+    font-size: 20px;
+    animation: floatUp 10s linear infinite;
+}
+
+.chubby-kids {
+    position: absolute;
+    font-size: 28px;
+    animation: floatUp 12s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    50% { opacity: 0.9; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+
+/* Celebration for final screen */
+.celebration {
+    animation: confetti 2.5s ease-in-out infinite;
+}
+
+@keyframes confetti {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2) rotate(10deg); }
+    100% { transform: scale(1); }
+}
+
+.hidden { display: none; }
+</style>
+</head>
+
+<body>
+
+<!-- Background Song (Varoon - Hindi song from free platform - Ad-free autoplay) -->
+<audio autoplay loop>
+    <source src="https://www.zapsplat.com/wp-content/uploads/2015/music/romantic_hindi_instrumental_varoon_style.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Animated Particles -->
+<script>
+for (let i = 0; i < 60; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = Math.random() * 100 + 'vw';
+    particle.style.animationDelay = Math.random() * 12 + 's';
+    document.body.appendChild(particle);
+}
+</script>
+
+<div class="card" id="mainCard">
+    <h1>💖 Puttu 💖</h1>
+    <div class="progress">
+        <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+    </div>
+    <div class="question" id="questionText">
+        Puttu me apko bhot pyaar krta hun 🥺❤️<br>
+        Kya aap bhi mujhse pyaar krti ho?
+    </div>
+    <button class="yes" onclick="nextQuestion()">YES 😘</button>
+    <button class="no" id="noBtn">NO 😏</button>
+</div>
+
+<script>
+const questions = [
+    "Kya aap mere saath lifetime wali love story likhogi? 📖💘",
+    "Agar me aapka ho jaun officially… to mana to nahi karogi? 😌",
+    "Future me matching outfits pehen ke reels banayenge? 💃🕺",
+    "Har ladai ke baad bhi sirf mujhe hi choose karogi? 🥺",
+    "Meri forever Valentine banogi? 💍❤️"
+];
+
+let current = 0;
+const questionText = document.getElementById("questionText");
+const progressBar = document.getElementById("progressBar");
+
+function nextQuestion() {
+    if (current < questions.length) {
+        questionText.innerHTML = questions[current];
+        current++;
+        progressBar.style.width = (current / questions.length) * 100 + '%';
+    } else {
+        questionText.innerHTML = "<div class='celebration'>YAYYYY 😭❤️<br>Officially meri Puttu meri forever Valentine 💖<br>Happy Valentine's Day 💌</div>";
+        document.querySelector(".yes").style.display = "none";
+        document.querySelector(".no").style.display = "none";
+        progressBar.style.width = '100%';
+        // Trigger extra celebration
+        for (let i = 0; i < 25; i++) {
+            setTimeout(() => createEmoji(), i * 150);
+        }
+    }
+}
+
+/* NO button runs when clicked */
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("click", moveButton);
+noBtn.addEventListener("mouseover", moveButton);
+
+function moveButton() {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 60);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+/* Floating hearts, stars, and chubby kids generator */
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 4 + 6) + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 8000);
+}
+
+function createStar() {
+    const star = document.createElement("div");
+    star.classList.add("star");
+    star.innerHTML = "⭐";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.animationDuration = (Math.random() * 4 + 8) + "s";
+    document.body.appendChild(star);
+    setTimeout(() => { star.remove(); }, 10000);
+}
+
+function createChubbyKids() {
+    const kids = document.createElement("div");
+    kids.classList.add("chubby-kids");
+    kids.innerHTML = "👶💕👶";
+    kids.style.left = Math.random() * 100 + "vw";
+    kids.style.animationDuration = (Math.random() * 4 + 10) + "s";
+    document.body.appendChild(kids);
+    setTimeout(() => { kids.remove(); }, 12000);
+}
+
+function createEmoji() {
+    const emoji = document.createElement("div");
+    emoji.classList.add("heart");
+    emoji.innerHTML = ["🎉", "💕", "🌟", "🥳"][Math.floor(Math.random() * 4)];
+    emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.animationDuration = (Math.random() * 4 + 6) + "s";
+    document.body.appendChild(emoji);
+    setTimeout(() => { emoji.remove(); }, 8000);
+}
+
+setInterval(createHeart, 600);
+setInterval(createStar, 800);
+setInterval(createChubbyKids, 1000);
+</script>
+
+</body>
+</html>
